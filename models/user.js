@@ -8,7 +8,7 @@ const userSchema = mongoose.Schema(
 			required: true,
 			max: 32
 		},
-		userName: {
+		username: {
 			type: String,
 			trim: true,
 			required: true,
@@ -49,7 +49,7 @@ const userSchema = mongoose.Schema(
 				required: true,
 				max: 32
 			},
-			zipCode: {
+			zipcode: {
 				type: String,
 				trim: true,
 				required: true,

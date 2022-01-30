@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 
+const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const cors = require("cors");
 
@@ -13,7 +14,7 @@ const userRoutes = require("./routes/user");
 /* -----------------------------------------------
 check relative path of the file you're working in.
 -------------------------------------------------*/
-console.log(process.cwd());
+// console.log(process.cwd());
 
 mongoose
 	.connect(process.env.DATABASE, {
@@ -27,6 +28,7 @@ mongoose
 
 app.use(morgan("dev"));
 app.use(cors());
+app.use(bodyParser.json({ limit: "2mb" }));
 
 /* ----------routes middleware -------------*/
 app.use("/api", userRoutes);
