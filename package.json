@@ -5,7 +5,11 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "nodemon server.js",
+		"start": "node server.js",
 		"seeder": "node utils/seedDB.js"
+	},
+	"engines": {
+		"node": "16.13.1"
 	},
 	"keywords": [],
 	"author": "",
